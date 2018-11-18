@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 
 export class ProductListComponent {
   pageTilte : string = "Product List";
+  imageWidth: number = 50;
+  imageMargin: number = 2;
+  showImage: boolean = false;
+  listFilter: string = 'cart'; 
   products: any[] = [
     {
         "productId": 2,
@@ -30,4 +34,12 @@ export class ProductListComponent {
         "imageUrl": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
       },
   ];
+
+  // this function only toggle the value of the 
+  // show image property
+  // on the button element you can find the binding 
+  // to the showImage ptoperty
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
 }
